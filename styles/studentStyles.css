@@ -1,0 +1,30 @@
+
+.container-fluid{
+    padding: 3% 15%;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+h3{
+    font-weight: bold;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    font-size: 1.1rem;
+}

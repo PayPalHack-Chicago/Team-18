@@ -11,4 +11,19 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
+  router.get('/register', (req, res) => {
+    console.log('Request for register recieved');
+    res.render('register');
+  });
+
+  router.get('/studentLanding', (req, res) => {
+    console.log('Request for student landing recieved');
+    res.render('studentLanding');
+  });
+
+  router.get('/tutorLanding', (req, res) => {
+    console.log('Request for tutor landing recieved');
+    res.render('tutorLanding');
+  });
+
   module.exports = router;

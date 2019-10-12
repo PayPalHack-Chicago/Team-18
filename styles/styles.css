@@ -2,7 +2,6 @@
     background-color: #A8D0E6;
 }
 #features{
-   
     padding: 7% 15%;
 }
 
@@ -34,6 +33,7 @@ h2{
 h3{
     font-weight: bold;
 }
+
 .navbar-brand{
     font-size: 1.5rem;
     font-weight: bold;
@@ -48,4 +48,15 @@ h3{
 
 .icon{
     padding-bottom: 2rem;
+}
+
+.carousel-item{
+    padding: 7% 15%;
+}
+
+#footer{
+    padding-top: 15px;
+    width: 100%;
+    color: white;
+    background-color: #24305E;
 }
