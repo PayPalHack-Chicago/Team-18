@@ -13,7 +13,13 @@ require("firebase/firestore");
 const externKey = require('./firebase');
 
 var dropin = require('braintree-web-drop-in');
-dropin.create({ /* options */ });
+dropin.create({ 
+    authorization: 'CLIENT_AUTHORIZATION',
+    container: '#dropin-container',
+    paypal: {
+      flow: 'vault'
+    }
+});
 
 let firebaseConfig = externKey.key(); 
 // Initialize Firebase
