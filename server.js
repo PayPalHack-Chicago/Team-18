@@ -1,18 +1,20 @@
 //run with nodemon server.js
 const express = require('express');
+const path = require('path');
+const routes = require('./scripts/routes');
 
 const app = express();
 const port = 3000;
 
-app.use(express.static(__dirname + '/styles'));
+app.set('views', path.join(__dirname, 'pages'));
 
-app.get("/",function(request, response){
-    response.sendFile(__dirname + '/pages/index.ejs');
-});
-app.get('/login', function (req, res) {
-    res.sendFile(__dirname + '/pages/login.html');
-  });
+//app.use(express.static(__dirname + '/styles'));
+app.use(express.static(path.join(__dirname,'css')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
+app.set('view engine', 'ejs');
+
+app.use('/', routes);
 
 app.listen(port, () => console.log('Server is listening on port ${port}'));
 

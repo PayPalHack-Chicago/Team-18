@@ -1,6 +1,22 @@
 #title{
     background-color: #A8D0E6;
 }
+#features{
+   
+    padding: 7% 15%;
+}
+
+#testimonials{
+    padding: 7% 15%;
+    background-color: #F76C6C;
+    color: white;
+    text-align: center;
+}
+
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
 .container-fluid{
     padding: 3% 15%;
 }
@@ -8,4 +24,28 @@
 h1{
     font-size: 3rem;
     line-height: 1.5;
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+h3{
+    font-weight: bold;
+}
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    font-size: 1.1rem;
+}
+
+.icon{
+    padding-bottom: 2rem;
 }
