@@ -10,6 +10,15 @@ router.get('/login', (req, res) => {
     console.log('Request for login recieved');
     res.render('login');
   });
+router.get('/student', (req, res) => {
+    console.log('Request for student page recieved');
+    res.render('studentList');
+  });
+router.get('/pricing', (req, res) => {
+    console.log('Request for pricing page recieved');
+    res.render('pricing');
+  });
+
 
   router.get('/register', (req, res) => {
     console.log('Request for register recieved');

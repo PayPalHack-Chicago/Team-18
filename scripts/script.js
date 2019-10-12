@@ -1,29 +1,32 @@
 // Your web app's Firebase configuration
-exports.fire = function() {
-    // Firebase App (the core Firebase SDK) is always required and
-    // must be listed before other Firebase SDKs
-    var firebase = require("firebase/app");
 
-    // Add the Firebase products that you want to use
-    require("firebase/auth");
-    require("firebase/firestore");
-    //firebase.analytics();
+// Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
+var firebase = require("firebase/app");
 
-        const externKey = require('./firebase');
+// Add the Firebase products that you want to use
+require("firebase/auth");
+require("firebase/firestore");
+//var firebaseui = require('firebaseui');
+//firebase.analytics();
 
-        let firebaseConfig = externKey.key(); 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        
-        let db = firebase.firestore();
-    
-        db.collection('tutors').get()
-        .then((snapshot) => {
-            snapshot.forEach((doc) => {
-            console.log(doc.id, '=>', doc.data());
-            });
-        })
-        .catch((err) => {
-            console.log('Error getting documents', err);
-        });
-    }
+const externKey = require('./firebase');
+
+var dropin = require('braintree-web-drop-in');
+dropin.create({ /* options */ });
+
+let firebaseConfig = externKey.key(); 
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+let db = firebase.firestore();
+
+db.collection('tutors').get()
+.then((snapshot) => {
+    snapshot.forEach((doc) => {
+    console.log(doc.id, '=>', doc.data());
+    });
+})
+.catch((err) => {
+    console.log('Error getting documents', err);
+});
