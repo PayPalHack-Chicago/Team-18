@@ -8,7 +8,7 @@ const port = 3000;
 
 app.set('views', path.join(__dirname, 'pages'));
 
-//app.use(express.static(__dirname + '/styles'));
+app.use(express.static(__dirname + '/styles'));
 app.use(express.static(path.join(__dirname,'css')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
